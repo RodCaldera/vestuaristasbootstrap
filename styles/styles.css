@@ -1,0 +1,163 @@
+* {
+    margin:0;
+    padding:0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
+
+@media screen (min-width 400px) AND (max-width 764px) {
+    .header__general{
+        flex-flow: column wrap;
+        height: fit-content;
+    }
+
+    .header__navtext{
+        flex-flow: column wrap;
+    }
+
+    .footer__general{
+        flex-flow: column wrap;
+    }
+}
+
+@media screen (min-width 400px) and (max-width 1024px){
+    .header__general{
+        flex-flow: column wrap;
+        height: fit-content;
+    }
+
+    .header__navtext{
+        flex-flow: column wrap;
+    }
+}
+
+    .footer__general{
+        flex-flow: column wrap;
+    }
+    
+.header__general{
+    background-color: #fAAB36;
+    color: whitesmoke;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.header__grid{
+    grid-area: header;
+}
+
+.header__title{
+    font-size: 50px;
+    font-variant: small-caps;
+    font-weight: 700;
+}
+
+.header__navtext{
+    font-size: medium;
+    font-variant: small-caps;
+    text-align: right;
+    text-decoration: none; 
+    text-shadow: thistle;
+    font-weight: bold;
+    list-style: none;
+    display: inline;
+    transform: scale3d(2);
+    transition: all 1s;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+}
+
+.main__background{
+    background-color: lightseagreen;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: whitesmoke;
+}
+
+.main__divImage{
+    text-align: center;
+}
+
+.main__section{
+    height: 300;
+    margin: 16px 16px 16px 16px;
+    padding: 16 50 50 16;
+}
+.main__h1{
+        font-size: 0.5in;
+        text-align: center;
+        font-family: 'Nothing You Could Do', cursive;
+        margin: 20 40 20 20;
+ }
+
+.main__h2{
+    font-size: 0.5in;
+    font-weight: bold;
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+.main__p{
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    line-height: 2;
+    margin: 20 20 20 20;
+}
+
+.main__video{
+    padding-top: 100; 
+    margin: 16px 16 px 16 px 16 px;
+    text-align: center;
+    background-color:  #FD5901;
+    width: 100%;
+}
+
+.footer__general{
+    height: 200; 
+    margin-top: 20px;
+    padding: 20 20 20 20;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    color: whitesmoke;
+    background-color: #005F60;
+}
+
+#grid{
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "mainImage  mainText mainText"
+        "mainVideo  mainText mainText"
+        "footer  footer footer";
+    grid-template-rows:  auto auto auto;
+    grid-template-columns:  40% 30% 30%;
+}
+
+.header__grid{
+    grid-area: header;
+    justify-self: stretch;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.mainImage__grid{
+    grid-area: mainImage;
+    grid-auto-flow: row;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.mainText__grid{
+    grid-area: mainText;
+    grid-auto-flow: row;
+    grid-column-start: 2;
+    grid-column-end: span 2;
+}
+
+.mainVideo__grid{
+    grid-area: mainVideo;
+    grid-auto-flow: row;
+}
+.footer__grid{
+    grid-area: footer;
+}
